@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Báo Ngày Tựu Trường & Khai Giảng 2026 - 2027 | Trường Tiểu Học Quỳnh Lộc B</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@700&family=Montserrat:wght@500;600;700;800;900&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Control Bar (Top-Right Floating Actions) -->
+    <div class="control-bar">
+        <a href="tuu-truong.html" class="btn-tuu-truong-link" title="Xem Trang Thông Báo Lịch Tựu Trường Riêng" style="text-decoration: none; display: flex; align-items: center; gap: 5px; background: rgba(229, 57, 53, 0.25); border: 1px solid #ef5350; color: #ffffff; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; transition: 0.2s;"><i class="fa-solid fa-school"></i> <span>Tựu Trường</span></a>
+        <a href="khai-giang.html" class="btn-tuu-truong-link" title="Xem Trang Thông Báo Lễ Khai Giảng Riêng" style="text-decoration: none; display: flex; align-items: center; gap: 5px; background: rgba(21, 101, 192, 0.35); border: 1px solid #42a5f5; color: #ffffff; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; transition: 0.2s;"><i class="fa-solid fa-flag"></i> <span>Khai Giảng</span></a>
+        <button id="btn-download" title="Tải Về Ảnh Banner 16:9 Chất Lượng Cao" class="btn-highlight"><i
+                class="fa-solid fa-download"></i> <span>Tải Banner HD</span></button>
+        <button id="btn-sound" title="Bật/Tắt Âm Nhạc Chào Mừng"><i class="fa-solid fa-volume-xmark"></i> <span>Âm
+                thanh</span></button>
+        <button id="btn-countdown" title="Xem Đồng Hồ Đếm Ngược"><i class="fa-solid fa-clock"></i> <span>Đếm
+                ngược</span></button>
+        <button id="btn-confetti" title="Bắn Pháo Hoa Chào Mừng"><i class="fa-solid fa-gift"></i> <span>Chào
+                mừng</span></button>
+        <button id="btn-fullscreen" title="Toàn Màn Hình 16:9"><i class="fa-solid fa-expand"></i> <span>16:9
+                Full</span></button>
+    </div>
+
+    <!-- Main 16:9 Widescreen Container Canvas -->
+    <main class="canvas-container-16-9" id="poster-canvas">
+
+        <!-- Bunting Flags Decoration Across Top -->
+        <div class="bunting-flags">
+            <span class="flag flag-red"></span>
+            <span class="flag flag-yellow"></span>
+            <span class="flag flag-blue"></span>
+            <span class="flag flag-green"></span>
+            <span class="flag flag-purple"></span>
+            <span class="flag flag-orange"></span>
+            <span class="flag flag-pink"></span>
+            <span class="flag flag-red"></span>
+            <span class="flag flag-yellow"></span>
+            <span class="flag flag-blue"></span>
+            <span class="flag flag-green"></span>
+            <span class="flag flag-purple"></span>
+            <span class="flag flag-orange"></span>
+            <span class="flag flag-pink"></span>
+        </div>
+
+        <!-- Floating Paper Airplanes & Stars -->
+        <div class="decorative-element paper-plane plane-1">✈️</div>
+        <div class="decorative-element paper-plane plane-2">✈️</div>
+        <div class="decorative-element star star-1">★</div>
+        <div class="decorative-element star star-2">★</div>
+        <div class="decorative-element star star-3">✨</div>
+
+        <!-- Canvas Main Content Layout -->
+        <div class="poster-inner">
+
+            <!-- LEFT COLUMN: Polaroid Photos -->
+            <div class="photo-column photo-col-left">
+                <!-- Polaroid Photo 1 -->
+                <div class="polaroid-card polaroid-top-left"
+                    onclick="openModal('assets/anh1.jpg', 'Lễ tổng kết & trao thưởng năm học')">
+                    <div class="tape-strip tape-top-left"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/anh1.jpg" alt="Lễ trao thưởng">
+                    </div>
+                </div>
+
+                <!-- Polaroid Photo 2 -->
+                <div class="polaroid-card polaroid-mid-left"
+                    onclick="openModal('assets/anh2.jpg', 'Hoạt động đọc sách và học tập')">
+                    <div class="tape-strip tape-top-right"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/anh2.jpg" alt="Cô trò trong giờ học">
+                    </div>
+                </div>
+
+                <!-- Polaroid Photo 5 -->
+                <div class="polaroid-card polaroid-top-left"
+                    onclick="openModal('assets/anh5.jpg', 'Lễ tổng kết & trao thưởng năm học')">
+                    <div class="tape-strip tape-top-left"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/anh5.jpg" alt="Lễ trao thưởng">
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENTER COLUMN: Main Content Banner -->
+            <div class="center-content">
+
+                <!-- School Header -->
+                <header class="school-header">
+                    <h3 class="ubnd-title">UBND PHƯỜNG TÂN MAI</h3>
+                    <h1 class="school-title">TRƯỜNG TIỂU HỌC QUỲNH LỘC B</h1>
+                    <div class="star-rating">★ ★ ★</div>
+                </header>
+
+                <!-- Banner Main Title -->
+                <div class="main-title-block">
+                    <div class="title-flex">
+                        <span class="word-ngay"></span>
+                        <span class="word-tuu-truong">Thông Báo</span>
+                    </div>
+                </div>
+
+                <!-- Slogan Pill Banner -->
+                <div class="slogan-pill">
+                    <span>Ươm mầm tri thức – Thắp sáng ước mơ – Vững bước tương lai</span>
+                </div>
+
+
+
+                <!-- Schedule Grid: Tựu Trường & Khai Giảng Cards -->
+                <div class="schedule-grid">
+                    <!-- Schedule Card 1: TỰU TRƯỜNG -->
+                    <div class="schedule-card card-tuu-truong red-card">
+                        <div class="card-badge red-badge">
+                            <i class="fa-solid fa-school"></i> TỰU TRƯỜNG
+                        </div>
+                        <div class="card-body">
+                            <div class="date-box-left">
+                                <span class="day-name">THỨ HAI</span>
+                                <span class="day-number">24</span>
+                                <span class="month-sub">08/2026</span>
+                            </div>
+                            <div class="divider-line"></div>
+                            <div class="date-box-right">
+                                <span class="month-label">THÁNG 8</span>
+                                <span class="year-label">NĂM 2026</span>
+                                <div class="heart-doodle">♥ ♥</div>
+                            </div>
+                        </div>
+                        <div class="card-time-badge time-red">
+                            <i class="fa-regular fa-clock"></i> Buổi sáng từ 07h30 – 10h30
+                        </div>
+                    </div>
+
+                    <!-- Schedule Card 2: KHAI GIẢNG -->
+                    <div class="schedule-card card-khai-giang red-card">
+                        <div class="card-badge red-badge">
+                            <i class="fa-solid fa-flag"></i> KHAI GIẢNG
+                        </div>
+                        <div class="card-body">
+                            <div class="date-box-left">
+                                <span class="day-name">THỨ BẢY</span>
+                                <span class="day-number">05</span>
+                                <span class="month-sub">09/2026</span>
+                            </div>
+                            <div class="divider-line"></div>
+                            <div class="date-box-right">
+                                <span class="month-label">THÁNG 9</span>
+                                <span class="year-label">NĂM 2026</span>
+                                <div class="heart-doodle">♥ ♥</div>
+                            </div>
+                        </div>
+                        <div class="card-time-badge time-red">
+                            <i class="fa-regular fa-clock"></i> Buổi sáng từ 07h30 – 09h30
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Two Sections Grid -->
+                <div class="info-sections-grid">
+                    <!-- Section 1: Nội dung ngày tựu trường -->
+                    <div class="info-card green-info-card">
+                        <div class="info-card-header green-header">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>NỘI DUNG NGÀY TỰU TRƯỜNG</span>
+                        </div>
+                        <ul class="info-list green-list">
+                            <li><i class="fa-solid fa-circle-check"></i> <span>Ổn định tổ chức lớp học.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span>Phổ biến nội quy trường, lớp.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span>Hướng dẫn học sinh các hoạt động đầu năm
+                                    học.</span></li>
+                        </ul>
+                        <div class="pencil-doodle">✏️</div>
+                    </div>
+
+                    <!-- Section 2: Một số lưu ý -->
+                    <div class="info-card blue-info-card">
+                        <div class="info-card-header blue-header">
+                            <i class="fa-solid fa-bell"></i>
+                            <span>MỘT SỐ LƯU Ý</span>
+                        </div>
+                        <ul class="info-list blue-list">
+                            <li>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Học sinh mặc trang phục gọn gàng, lịch sự. Mang theo các dụng cụ học tập cần thiết
+                                    theo hướng dẫn của giáo viên chủ nhiệm.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-user-shield"></i>
+                                <span>Phụ huynh đưa đón học sinh đúng giờ, bảo đảm an toàn giao thông cổng
+                                    trường.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clipboard-check"></i>
+                                <span>Thực hiện nghiêm túc các quy định của nhà trường trong thời gian tựu
+                                    trường.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Welcome Message -->
+                <footer class="welcome-footer">
+                    <span class="heart-icon">❤️</span>
+                    <span class="welcome-text">Chào mừng các em đến với năm học mới!</span>
+                    <span class="heart-icon">❤️</span>
+                </footer>
+
+            </div>
+
+            <!-- RIGHT COLUMN: Polaroid Photos & Blackboard -->
+            <div class="photo-column photo-col-right">
+                <!-- Polaroid Photo 3 -->
+                <div class="polaroid-card polaroid-top-right"
+                    onclick="openModal('assets/photo3.jpg', 'Lễ chào cờ & hân hoan cờ hoa ngày hội')">
+                    <div class="tape-strip tape-top-right"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/anh3.jpg" alt="Lễ chào cờ sân trường">
+                    </div>
+                </div>
+
+                <!-- Polaroid Photo 4 -->
+                <div class="polaroid-card polaroid-mid-right"
+                    onclick="openModal('assets/anh4.jpg', 'Học sinh hăng hái trong phòng học')">
+                    <div class="tape-strip tape-top-left"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/anh4.jpg" alt="Học sinh trong lớp học">
+                    </div>
+                </div>
+
+                <!-- Polaroid Photo 5 -->
+                <div class="polaroid-card polaroid-top-right"
+                    onclick="openModal('assets/anh6.jpg', 'Lễ chào cờ & hân hoan cờ hoa ngày hội')">
+                    <div class="tape-strip tape-top-right"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="assets/anh6.jpg" alt="Lễ chào cờ sân trường">
+                    </div>
+                </div>
+
+                <!-- Blackboard Component -->
+                <!-- <div class="chalkboard-container">
+                    <div class="chalkboard-inner">
+                        <p class="chalk-line">Học vui</p>
+                        <p class="chalk-line">Khỏe mạnh</p>
+                        <p class="chalk-line">Tự tin</p>
+                        <p class="chalk-line">Tỏa sáng</p>
+                        <div class="chalk-heart">♡ ♡</div>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+
+        <!-- Bottom Foreground Landscape Illustrations -->
+        <div class="landscape-bottom">
+            <!-- Left School Supplies Cluster -->
+            <div class="school-supplies-cluster">
+                <div class="backpack">🎒</div>
+                <div class="book-stack">📚</div>
+                <div class="crayons">✏️🎨</div>
+            </div>
+
+            <!-- Right Book Stack -->
+            <div class="right-book-stack">📚📖</div>
+
+            <!-- Grass & Flowers Decorative Border -->
+            <div class="grass-border">
+                <span class="flower f1">🌸</span>
+                <span class="flower f2">🌼</span>
+                <span class="flower f3">🌻</span>
+                <span class="flower f4">🌸</span>
+                <span class="flower f5">🌼</span>
+                <span class="flower f6">🌻</span>
+                <span class="flower f7">🌸</span>
+                <span class="flower f8">🌼</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal Lightbox for Image Zoom -->
+    <div id="image-modal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img" src="" alt="Zoomed view">
+        <div id="modal-caption"></div>
+    </div>
+
+    <!-- Countdown Modal -->
+    <div id="countdown-modal" class="modal">
+        <div class="countdown-modal-box">
+            <span class="modal-close modal-close-dark" onclick="closeCountdownModal()">&times;</span>
+            <h2><i class="fa-solid fa-hourglass-half"></i> ĐẾM NGƯỢC NĂM HỌC MỚI 2026 - 2027</h2>
+
+            <div class="timer-section">
+                <h3><i class="fa-solid fa-school color-green"></i> Ngày Tựu Trường (24/08/2026)</h3>
+                <div class="countdown-timer" id="timer-tuu-truong">
+                    <div class="time-block"><span id="tt-days">00</span><label>Ngày</label></div>
+                    <div class="time-block"><span id="tt-hours">00</span><label>Giờ</label></div>
+                    <div class="time-block"><span id="tt-minutes">00</span><label>Phút</label></div>
+                    <div class="time-block"><span id="tt-seconds">00</span><label>Giây</label></div>
+                </div>
+            </div>
+
+            <div class="timer-section">
+                <h3><i class="fa-solid fa-flag color-blue"></i> Lễ Khai Giảng (05/09/2026)</h3>
+                <div class="countdown-timer" id="timer-khai-giang">
+                    <div class="time-block"><span id="kg-days">00</span><label>Ngày</label></div>
+                    <div class="time-block"><span id="kg-hours">00</span><label>Giờ</label></div>
+                    <div class="time-block"><span id="kg-minutes">00</span><label>Phút</label></div>
+                    <div class="time-block"><span id="kg-seconds">00</span><label>Giây</label></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HTML2Canvas Library for HD Banner Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Canvas Confetti Library for Celebrations -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
